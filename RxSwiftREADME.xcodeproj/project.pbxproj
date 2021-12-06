@@ -13,6 +13,8 @@
 		75F3D1FF275B882300B0E416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F3D1FD275B882300B0E416 /* Main.storyboard */; };
 		75F3D201275B882300B0E416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F3D200275B882300B0E416 /* Assets.xcassets */; };
 		75F3D204275B882300B0E416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F3D202275B882300B0E416 /* LaunchScreen.storyboard */; };
+		75F3D20F275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D20E275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift */; };
+		75F3D213275DEED900B0E416 /* WithoutRxCoccoa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F3D212275DEED900B0E416 /* WithoutRxCoccoa.storyboard */; };
 		F285CDB276F10CEAE3A2D6E5 /* Pods_RxSwiftREADME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF0168707DE0BCD40D8FCBE /* Pods_RxSwiftREADME.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		75F3D203275B882300B0E416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75F3D205275B882300B0E416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75F3D20B275B8E3700B0E416 /* RxSwiftMyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftMyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		75F3D20E275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutRxCoccoaViewController.swift; sourceTree = "<group>"; };
+		75F3D212275DEED900B0E416 /* WithoutRxCoccoa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WithoutRxCoccoa.storyboard; sourceTree = "<group>"; };
 		9CF0168707DE0BCD40D8FCBE /* Pods_RxSwiftREADME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftREADME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2881259A90D0F29CAD4C49C /* Pods-RxSwiftREADME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftREADME.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftREADME/Pods-RxSwiftREADME.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,11 +81,21 @@
 				75F3D1F9275B882300B0E416 /* SceneDelegate.swift */,
 				75F3D1FB275B882300B0E416 /* ViewController.swift */,
 				75F3D1FD275B882300B0E416 /* Main.storyboard */,
+				75F3D20D275DEE8700B0E416 /* WithoutRxCoccoa */,
 				75F3D200275B882300B0E416 /* Assets.xcassets */,
 				75F3D202275B882300B0E416 /* LaunchScreen.storyboard */,
 				75F3D205275B882300B0E416 /* Info.plist */,
 			);
 			path = RxSwiftREADME;
+			sourceTree = "<group>";
+		};
+		75F3D20D275DEE8700B0E416 /* WithoutRxCoccoa */ = {
+			isa = PBXGroup;
+			children = (
+				75F3D20E275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift */,
+				75F3D212275DEED900B0E416 /* WithoutRxCoccoa.storyboard */,
+			);
+			path = WithoutRxCoccoa;
 			sourceTree = "<group>";
 		};
 		BE19D9F80F62B8038BFC7DE7 /* Pods */ = {
@@ -156,6 +170,7 @@
 				75F3D204275B882300B0E416 /* LaunchScreen.storyboard in Resources */,
 				75F3D201275B882300B0E416 /* Assets.xcassets in Resources */,
 				75F3D1FF275B882300B0E416 /* Main.storyboard in Resources */,
+				75F3D213275DEED900B0E416 /* WithoutRxCoccoa.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +226,7 @@
 				75F3D1FC275B882300B0E416 /* ViewController.swift in Sources */,
 				75F3D1F8275B882300B0E416 /* AppDelegate.swift in Sources */,
 				75F3D1FA275B882300B0E416 /* SceneDelegate.swift in Sources */,
+				75F3D20F275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
