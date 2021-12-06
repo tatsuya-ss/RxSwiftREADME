@@ -26,6 +26,7 @@
 		75F3D200275B882300B0E416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F3D203275B882300B0E416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75F3D205275B882300B0E416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F3D20B275B8E3700B0E416 /* RxSwiftMyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftMyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CF0168707DE0BCD40D8FCBE /* Pods_RxSwiftREADME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftREADME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2881259A90D0F29CAD4C49C /* Pods-RxSwiftREADME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftREADME.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftREADME/Pods-RxSwiftREADME.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +54,7 @@
 		75F3D1EB275B882300B0E416 = {
 			isa = PBXGroup;
 			children = (
+				75F3D20B275B8E3700B0E416 /* RxSwiftMyPlayground.playground */,
 				75F3D1F6275B882300B0E416 /* RxSwiftREADME */,
 				75F3D1F5275B882300B0E416 /* Products */,
 				BE19D9F80F62B8038BFC7DE7 /* Pods */,
@@ -88,7 +90,6 @@
 				C2881259A90D0F29CAD4C49C /* Pods-RxSwiftREADME.debug.xcconfig */,
 				7414C89FADD44D0F0616F6E5 /* Pods-RxSwiftREADME.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
