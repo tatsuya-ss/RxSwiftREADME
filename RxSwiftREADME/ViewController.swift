@@ -19,33 +19,15 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // RxCocoa
         setupSearchBar()
         resultLabel.text = "入力なし"
-        
-        // Observable作成
-//        searchBarEvent = makeSearchBarObservable()
-//        searchBar.delegate = self
-    }
-    
-}
-
-// MARK: -
-extension ViewController: UISearchBarDelegate {
-    // Observable作成
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchBarEvent?
-            .subscribe(onNext: { text in
-                self.resultLabel.text = text
-            })
-            .disposed(by: disposeBag)
     }
     
 }
 
 // MARK: - func
 extension ViewController {
-    // RxCocoa
+    
     private func setupSearchBar() {
         searchBar.rx.text.orEmpty
             .subscribe(onNext: { text in
@@ -54,12 +36,17 @@ extension ViewController {
             .disposed(by: disposeBag)
     }
     
-    // Observable作成
-    private func makeSearchBarObservable() -> Observable<String> {
-        return Observable<String>.create { observer in
-            observer.on(.next(self.searchBar.text ?? "入力無し"))
-            return Disposables.create()
-        }
+}
+
+// MARK: - instantiate
+extension ViewController {
+    
+    static func instantiate() -> ViewController {
+        guard let VC = UIStoryboard(name: "ViewController", bundle: nil)
+                .instantiateViewController(withIdentifier: "ViewController")
+                as? ViewController
+        else { fatalError("ViewControllerが見つかりません。") }
+        return VC
     }
     
 }
