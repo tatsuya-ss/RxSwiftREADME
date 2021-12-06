@@ -6,14 +6,60 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var resultLabel: UILabel!
+    
+    private let disposeBag = DisposeBag()
+    private var searchBarEvent: Observable<String>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // RxCocoa
+        setupSearchBar()
+        resultLabel.text = "入力なし"
+        
+        // Observable作成
+//        searchBarEvent = makeSearchBarObservable()
+//        searchBar.delegate = self
     }
-
-
+    
 }
 
+// MARK: -
+extension ViewController: UISearchBarDelegate {
+    // Observable作成
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBarEvent?
+            .subscribe(onNext: { text in
+                self.resultLabel.text = text
+            })
+            .disposed(by: disposeBag)
+    }
+    
+}
+
+// MARK: - func
+extension ViewController {
+    // RxCocoa
+    private func setupSearchBar() {
+        searchBar.rx.text.orEmpty
+            .subscribe(onNext: { text in
+                self.resultLabel.text = text
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    // Observable作成
+    private func makeSearchBarObservable() -> Observable<String> {
+        return Observable<String>.create { observer in
+            observer.on(.next(self.searchBar.text ?? "入力無し"))
+            return Disposables.create()
+        }
+    }
+    
+}
