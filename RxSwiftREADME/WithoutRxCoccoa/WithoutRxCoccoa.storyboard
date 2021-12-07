@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Without Rx Coccoa View Controller-->
+        <!--WithoutRxCocoa-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="WithoutRxCoccoaViewController" id="Y6W-OH-hqX" customClass="WithoutRxCoccoaViewController" customModule="RxSwiftREADME" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +68,7 @@
                             <constraint firstItem="Yci-wP-Jg1" firstAttribute="top" secondItem="U6K-rE-A6P" secondAttribute="bottom" constant="8" symbolic="YES" id="yMg-EJ-1Gl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eIU-ln-TiM"/>
+                    <navigationItem key="navigationItem" title="WithoutRxCocoa" id="eIU-ln-TiM"/>
                     <connections>
                         <outlet property="displayLabel" destination="sTC-aQ-qyn" id="hZx-DQ-OGs"/>
                         <outlet property="loginButton" destination="Vt4-qD-HcB" id="6DX-Ac-BFA"/>

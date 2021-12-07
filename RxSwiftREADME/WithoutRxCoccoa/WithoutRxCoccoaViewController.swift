@@ -16,9 +16,8 @@ final class WithoutRxCoccoaViewController: UIViewController {
     @IBOutlet private weak var textField2: UITextField!
     @IBOutlet private weak var loginButton: UIButton!
     
-    private var searchBarTextDidChangeEvent: Observable<String>?
     private let disposeBag = DisposeBag()
-    
+    private var searchBarTextDidChangeEvent: Observable<String>?
     private var validateEvent: Observable<Bool> {
         return Observable.combineLatest(textField1.rx.text.orEmpty, textField2.rx.text.orEmpty)
             .map { [$0, $1].allSatisfy { !$0.isEmpty } }
@@ -27,6 +26,7 @@ final class WithoutRxCoccoaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        setupNavigation()
         setupSearchBarEvent()
         
         validateEvent
@@ -34,14 +34,6 @@ final class WithoutRxCoccoaViewController: UIViewController {
                 self.changeLoginButtonState(isEnabled: isEnabled)
             })
             .disposed(by: disposeBag)
-        
-//        Observable.combineLatest(textField1.rx.text.orEmpty, textField2.rx.text.orEmpty)
-//            .map { [$0, $1].allSatisfy { !$0.isEmpty } }
-//            .subscribe(onNext: { isEnabled in
-//                self.changeLoginButtonState(isEnabled: isEnabled)
-//            })
-//            .disposed(by: disposeBag)
-        
     }
     
     @IBAction private func didTapLoginButton(_ sender: Any) {
@@ -57,7 +49,7 @@ extension WithoutRxCoccoaViewController {
     }
 }
 
-// MARK: -
+// MARK: - UISearchBarDelegate
 extension WithoutRxCoccoaViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBarTextDidChangeEvent?.subscribe(onNext: { text in
@@ -77,6 +69,12 @@ extension WithoutRxCoccoaViewController {
         }
     }
     
+    private func setupNavigation() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .systemBackground
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.standardAppearance = appearance
+    }
 }
 
 // MARK: - instantiate

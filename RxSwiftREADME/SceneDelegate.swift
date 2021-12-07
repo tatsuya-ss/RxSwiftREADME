@@ -15,8 +15,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
-        let vc = ViewController.instantiate()
-//        let vc = WithoutRxCoccoaViewController.instantiate()
+//        let vc = ViewController.instantiate()
+        let vc = WithoutRxCoccoaViewController.instantiate()
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
     }
