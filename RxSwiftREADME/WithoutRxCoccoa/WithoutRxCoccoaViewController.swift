@@ -28,12 +28,7 @@ final class WithoutRxCoccoaViewController: UIViewController {
         searchBar.delegate = self
         setupNavigation()
         setupSearchBarEvent()
-        
-        validateEvent
-            .subscribe(onNext: { isEnabled in
-                self.changeLoginButtonState(isEnabled: isEnabled)
-            })
-            .disposed(by: disposeBag)
+        setupValidate()
     }
     
     @IBAction private func didTapLoginButton(_ sender: Any) {
@@ -61,6 +56,14 @@ extension WithoutRxCoccoaViewController: UISearchBarDelegate {
 
 // MARK: - setup
 extension WithoutRxCoccoaViewController {
+    
+    private func setupValidate() {
+        validateEvent
+            .subscribe(onNext: { isEnabled in
+                self.changeLoginButtonState(isEnabled: isEnabled)
+            })
+            .disposed(by: disposeBag)
+    }
         
     private func setupSearchBarEvent() {
         searchBarTextDidChangeEvent = Observable<String>.create { observer in
