@@ -32,7 +32,8 @@ final class WithoutRxCoccoaViewController: UIViewController {
     }
     
     @IBAction private func didTapLoginButton(_ sender: Any) {
-        print(#function)
+        let tableVC = TableViewController()
+        navigationController?.pushViewController(tableVC, animated: true)
     }
 }
 
