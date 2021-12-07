@@ -29,21 +29,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U6K-rE-A6P">
+                                <rect key="frame" x="100" y="198" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yci-wP-Jg1">
+                                <rect key="frame" x="100" y="240" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt4-qD-HcB">
+                                <rect key="frame" x="100" y="282" width="214" height="31"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <connections>
+                                    <action selector="didTapLoginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nm2-B8-ffp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="r8v-xr-Vjl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2E0-t6-FsX"/>
+                            <constraint firstItem="Vt4-qD-HcB" firstAttribute="top" secondItem="Yci-wP-Jg1" secondAttribute="bottom" constant="8" symbolic="YES" id="AuO-VV-WNw"/>
+                            <constraint firstItem="U6K-rE-A6P" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="N1x-e5-dOK"/>
                             <constraint firstItem="r8v-xr-Vjl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Qq3-TQ-dZX"/>
                             <constraint firstItem="sTC-aQ-qyn" firstAttribute="top" secondItem="r8v-xr-Vjl" secondAttribute="bottom" constant="18" id="Sqz-3G-on7"/>
+                            <constraint firstItem="Vt4-qD-HcB" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="WoP-bT-rtn"/>
+                            <constraint firstItem="Yci-wP-Jg1" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Yvp-bU-6a1"/>
+                            <constraint firstItem="Yci-wP-Jg1" firstAttribute="leading" secondItem="U6K-rE-A6P" secondAttribute="leading" id="adY-la-FwA"/>
+                            <constraint firstItem="U6K-rE-A6P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="gPT-Gy-nB2"/>
                             <constraint firstItem="sTC-aQ-qyn" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jRa-dl-zUV"/>
+                            <constraint firstItem="Vt4-qD-HcB" firstAttribute="leading" secondItem="Yci-wP-Jg1" secondAttribute="leading" id="mDa-Xw-zFc"/>
                             <constraint firstItem="r8v-xr-Vjl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="owV-HK-pTK"/>
+                            <constraint firstItem="U6K-rE-A6P" firstAttribute="top" secondItem="sTC-aQ-qyn" secondAttribute="bottom" constant="27" id="uuZ-fv-siN"/>
+                            <constraint firstItem="Yci-wP-Jg1" firstAttribute="top" secondItem="U6K-rE-A6P" secondAttribute="bottom" constant="8" symbolic="YES" id="yMg-EJ-1Gl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eIU-ln-TiM"/>
                     <connections>
                         <outlet property="displayLabel" destination="sTC-aQ-qyn" id="hZx-DQ-OGs"/>
+                        <outlet property="loginButton" destination="Vt4-qD-HcB" id="6DX-Ac-BFA"/>
                         <outlet property="searchBar" destination="r8v-xr-Vjl" id="YCC-vh-Ita"/>
+                        <outlet property="textField1" destination="U6K-rE-A6P" id="Wwd-ne-uxv"/>
+                        <outlet property="textField2" destination="Yci-wP-Jg1" id="aKH-QL-Nch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,6 +101,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

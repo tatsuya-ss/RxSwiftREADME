@@ -13,9 +13,11 @@ final class ViewController: UIViewController {
     
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var textField1: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
     
     private let disposeBag = DisposeBag()
-    private var searchBarEvent: Observable<String>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
