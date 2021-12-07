@@ -29,19 +29,18 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d29-zY-8nV">
-                                <rect key="frame" x="161" y="220" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d29-zY-8nV">
+                                <rect key="frame" x="50" y="220" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vIM-gs-xz4">
-                                <rect key="frame" x="161" y="262" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vIM-gs-xz4">
+                                <rect key="frame" x="50" y="262" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-Bo-CAI">
-                                <rect key="frame" x="180" y="304" width="60" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-Bo-CAI">
+                                <rect key="frame" x="50" y="304" width="314" height="31"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
@@ -51,12 +50,17 @@
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="d29-zY-8nV" firstAttribute="top" secondItem="z6N-5N-CJf" secondAttribute="bottom" constant="8" symbolic="YES" id="3Gb-da-JFf"/>
+                            <constraint firstItem="d29-zY-8nV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="CMz-wZ-FXf"/>
+                            <constraint firstItem="V3g-Bo-CAI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CaK-IB-r0t"/>
+                            <constraint firstItem="V3g-Bo-CAI" firstAttribute="top" secondItem="vIM-gs-xz4" secondAttribute="bottom" constant="8" symbolic="YES" id="DAl-sW-dOc"/>
                             <constraint firstItem="vIM-gs-xz4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JcU-wX-MJk"/>
                             <constraint firstItem="7KQ-1s-6s0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LIe-6n-yVA"/>
                             <constraint firstItem="7KQ-1s-6s0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NMN-Ft-UUN"/>
                             <constraint firstItem="z6N-5N-CJf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P7I-kt-uLQ"/>
                             <constraint firstItem="z6N-5N-CJf" firstAttribute="top" secondItem="7KQ-1s-6s0" secondAttribute="bottom" constant="50" id="XoD-XH-XaK"/>
                             <constraint firstItem="7KQ-1s-6s0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zfh-IG-XcK"/>
+                            <constraint firstItem="vIM-gs-xz4" firstAttribute="leading" secondItem="d29-zY-8nV" secondAttribute="leading" id="gAD-8X-nc7"/>
+                            <constraint firstItem="V3g-Bo-CAI" firstAttribute="leading" secondItem="vIM-gs-xz4" secondAttribute="leading" id="jji-CK-efK"/>
                             <constraint firstItem="d29-zY-8nV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="la1-BE-BqW"/>
                             <constraint firstItem="vIM-gs-xz4" firstAttribute="top" secondItem="d29-zY-8nV" secondAttribute="bottom" constant="8" symbolic="YES" id="rK3-od-WIF"/>
                         </constraints>

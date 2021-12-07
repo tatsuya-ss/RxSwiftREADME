@@ -22,13 +22,31 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
-        resultLabel.text = "入力なし"
+        setupTextValidate()
     }
     
 }
 
 // MARK: - func
 extension ViewController {
+    
+    private func setupTextValidate() {
+        Observable
+            .combineLatest(
+                textField1.rx.text.orEmpty,
+                textField2.rx.text.orEmpty
+            )
+            .map { [$0, $1].allSatisfy { !$0.isEmpty } }
+            .subscribe(onNext: { isEnable in
+                self.changeLoginButtonState(isEnable: isEnable)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func changeLoginButtonState(isEnable: Bool) {
+        loginButton.isEnabled = isEnable
+        loginButton.backgroundColor = isEnable ? .systemYellow : .systemGray
+    }
     
     private func setupSearchBar() {
         searchBar.rx.text.orEmpty
@@ -44,7 +62,7 @@ extension ViewController {
 extension ViewController {
     
     static func instantiate() -> ViewController {
-        guard let VC = UIStoryboard(name: "ViewController", bundle: nil)
+        guard let VC = UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "ViewController")
                 as? ViewController
         else { fatalError("ViewControllerが見つかりません。") }
