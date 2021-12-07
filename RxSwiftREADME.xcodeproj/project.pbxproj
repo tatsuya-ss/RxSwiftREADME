@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7532256E275F64AF008075F0 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7532256D275F64AF008075F0 /* TableView.xib */; };
+		75322570275F64C8008075F0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532256F275F64C8008075F0 /* TableViewController.swift */; };
+		75322574275F6623008075F0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75322572275F6623008075F0 /* TableViewCell.swift */; };
+		75322575275F6623008075F0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75322573275F6623008075F0 /* TableViewCell.xib */; };
 		75F3D1F8275B882300B0E416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D1F7275B882300B0E416 /* AppDelegate.swift */; };
 		75F3D1FA275B882300B0E416 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D1F9275B882300B0E416 /* SceneDelegate.swift */; };
 		75F3D1FC275B882300B0E416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D1FB275B882300B0E416 /* ViewController.swift */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		7414C89FADD44D0F0616F6E5 /* Pods-RxSwiftREADME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftREADME.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftREADME/Pods-RxSwiftREADME.release.xcconfig"; sourceTree = "<group>"; };
+		7532256D275F64AF008075F0 /* TableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
+		7532256F275F64C8008075F0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		75322572275F6623008075F0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		75322573275F6623008075F0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		75F3D1F4275B882300B0E416 /* RxSwiftREADME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftREADME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F3D1F7275B882300B0E416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75F3D1F9275B882300B0E416 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +61,25 @@
 				9CF0168707DE0BCD40D8FCBE /* Pods_RxSwiftREADME.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7532256C275F6478008075F0 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				7532256F275F64C8008075F0 /* TableViewController.swift */,
+				7532256D275F64AF008075F0 /* TableView.xib */,
+				75322571275F660D008075F0 /* Cell */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		75322571275F660D008075F0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				75322572275F6623008075F0 /* TableViewCell.swift */,
+				75322573275F6623008075F0 /* TableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		75F3D1EB275B882300B0E416 = {
@@ -94,6 +121,7 @@
 			children = (
 				75F3D20E275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift */,
 				75F3D212275DEED900B0E416 /* WithoutRxCoccoa.storyboard */,
+				7532256C275F6478008075F0 /* Table */,
 			);
 			path = WithoutRxCoccoa;
 			sourceTree = "<group>";
@@ -168,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F3D204275B882300B0E416 /* LaunchScreen.storyboard in Resources */,
+				75322575275F6623008075F0 /* TableViewCell.xib in Resources */,
 				75F3D201275B882300B0E416 /* Assets.xcassets in Resources */,
+				7532256E275F64AF008075F0 /* TableView.xib in Resources */,
 				75F3D1FF275B882300B0E416 /* Main.storyboard in Resources */,
 				75F3D213275DEED900B0E416 /* WithoutRxCoccoa.storyboard in Resources */,
 			);
@@ -226,6 +256,8 @@
 				75F3D1FC275B882300B0E416 /* ViewController.swift in Sources */,
 				75F3D1F8275B882300B0E416 /* AppDelegate.swift in Sources */,
 				75F3D1FA275B882300B0E416 /* SceneDelegate.swift in Sources */,
+				75322574275F6623008075F0 /* TableViewCell.swift in Sources */,
+				75322570275F64C8008075F0 /* TableViewController.swift in Sources */,
 				75F3D20F275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
