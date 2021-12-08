@@ -7,23 +7,26 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
-
+final class DetailsViewController: UIViewController {
+    
+    @IBOutlet private weak var emojiLabel: UILabel!
+    @IBOutlet private weak var checkImage: UIImageView!
+    
+    private var item: Item!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        emojiLabel.text = item.title
+        checkImage.image = item.isHidden ? UIImage(systemName: "questionmark.circle.fill") : UIImage(systemName: "checkmark.seal.fill")
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    init(item: Item) {
+        super.init(nibName: String(describing: Self.self), bundle: nil)
+        self.item = item
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

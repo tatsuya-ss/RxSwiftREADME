@@ -22,6 +22,7 @@ final class TableViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupTableViewCell()
+        setupTableViewActions()
     }
     
     init() {
@@ -37,6 +38,23 @@ final class TableViewController: UIViewController {
 
 // MARK: - setup
 extension TableViewController {
+    
+    private func setupTableViewActions() {
+        // MARK: セルタップ処理
+        tableView.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                self.pushToDetailsVC(indexPath: indexPath)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func pushToDetailsVC(indexPath: IndexPath) {
+        items.subscribe(onNext: { items in
+            let detailsVC = DetailsViewController(item: items[indexPath.row])
+            self.navigationController?.pushViewController(detailsVC, animated: true)
+        })
+            .disposed(by: disposeBag)
+    }
     
     private func setupTableViewCell() {
         items
