@@ -15,9 +15,9 @@ final class TableViewCell: UITableViewCell {
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
     
-    func configure(title: String, isHidden: Bool) {
-        titleLabel.text = title
-        checkImage.isHidden = isHidden
+    func configure(item: Item) {
+        titleLabel.text = item.title
+        checkImage.isHidden = item.isHidden
     }
     
     override func awakeFromNib() {
