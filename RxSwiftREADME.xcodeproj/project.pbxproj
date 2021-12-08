@@ -12,6 +12,8 @@
 		75322574275F6623008075F0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75322572275F6623008075F0 /* TableViewCell.swift */; };
 		75322575275F6623008075F0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75322573275F6623008075F0 /* TableViewCell.xib */; };
 		75322577275F6DD8008075F0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75322576275F6DD8008075F0 /* Item.swift */; };
+		755531102760A21500FFEABE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555310E2760A21500FFEABE /* DetailsViewController.swift */; };
+		755531112760A21500FFEABE /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7555310F2760A21500FFEABE /* DetailsViewController.xib */; };
 		75F3D1F8275B882300B0E416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D1F7275B882300B0E416 /* AppDelegate.swift */; };
 		75F3D1FA275B882300B0E416 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D1F9275B882300B0E416 /* SceneDelegate.swift */; };
 		75F3D1FC275B882300B0E416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3D1FB275B882300B0E416 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 		75322572275F6623008075F0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		75322573275F6623008075F0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		75322576275F6DD8008075F0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7555310E2760A21500FFEABE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		7555310F2760A21500FFEABE /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		75F3D1F4275B882300B0E416 /* RxSwiftREADME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftREADME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F3D1F7275B882300B0E416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75F3D1F9275B882300B0E416 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7555310D2760A1DA00FFEABE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				7555310E2760A21500FFEABE /* DetailsViewController.swift */,
+				7555310F2760A21500FFEABE /* DetailsViewController.xib */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		75F3D1EB275B882300B0E416 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 				75F3D20E275DEEA900B0E416 /* WithoutRxCoccoaViewController.swift */,
 				75F3D212275DEED900B0E416 /* WithoutRxCoccoa.storyboard */,
 				7532256C275F6478008075F0 /* Table */,
+				7555310D2760A1DA00FFEABE /* Details */,
 			);
 			path = WithoutRxCoccoa;
 			sourceTree = "<group>";
@@ -198,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755531112760A21500FFEABE /* DetailsViewController.xib in Resources */,
 				75F3D204275B882300B0E416 /* LaunchScreen.storyboard in Resources */,
 				75322575275F6623008075F0 /* TableViewCell.xib in Resources */,
 				75F3D201275B882300B0E416 /* Assets.xcassets in Resources */,
@@ -259,6 +274,7 @@
 				75F3D1FC275B882300B0E416 /* ViewController.swift in Sources */,
 				75F3D1F8275B882300B0E416 /* AppDelegate.swift in Sources */,
 				75F3D1FA275B882300B0E416 /* SceneDelegate.swift in Sources */,
+				755531102760A21500FFEABE /* DetailsViewController.swift in Sources */,
 				75322574275F6623008075F0 /* TableViewCell.swift in Sources */,
 				75322577275F6DD8008075F0 /* Item.swift in Sources */,
 				75322570275F64C8008075F0 /* TableViewController.swift in Sources */,
